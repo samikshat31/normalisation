@@ -15,7 +15,7 @@ row_variances = np.var(m, axis=1)
 print("BATCH NORMALISATION")
 
 # perform mean normalization and variance scaling for each row
-for i in range(m.shape[1]):
+for i in range(m.shape[0]):
     m_norm = gamma*((m[i] - row_means[i]) / np.sqrt(row_variances[i] + epsilon)) + beta
     print(" Normalized row", i, ":", m_norm)
     
