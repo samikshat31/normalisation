@@ -27,5 +27,5 @@ col_variances = np.var(m, axis=0)
 print("LAYER NORMALISATION")
 # perform mean normalization and variance scaling for each column
 for j in range(m.shape[0]):
-    m__norm = gamma*((m[j] - col_means[j]) / np.sqrt(col_variances[j] + epsilon)) + beta
-    print(" Normalized row", j, ":", m__norm)
+    m_norm = gamma*((m[j] - col_means[j]) / np.sqrt(col_variances[j] + epsilon)) + beta
+    print(" Normalized row", j, ":", m_norm)
