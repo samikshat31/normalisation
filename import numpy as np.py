@@ -18,6 +18,7 @@ print("BATCH NORMALISATION")
 for i in range(m.shape[0]):
     m_norm = gamma*((m[i] - row_means[i]) / np.sqrt(row_variances[i] + epsilon)) + beta
     print(" Normalized row", i, ":", m_norm)
+    print(" ")
     
 print(" ")
 # calculate the mean and variance of each column
@@ -29,3 +30,4 @@ print("LAYER NORMALISATION")
 for j in range(m.shape[0]):
     m_norm = gamma*((m[j] - col_means[j]) / np.sqrt(col_variances[j] + epsilon)) + beta
     print(" Normalized row", j, ":", m_norm)
+    print(" ")
